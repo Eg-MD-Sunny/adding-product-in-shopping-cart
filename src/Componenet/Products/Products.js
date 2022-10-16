@@ -12,7 +12,7 @@ const Products = () => {
     },[])
     return (
         <div>
-            <h3>Welcome to my Shop</h3>
+            <h1>Welcome to my Shop</h1>
             <div className="gridStyle">
                 {
                     products.map(product=><Product
