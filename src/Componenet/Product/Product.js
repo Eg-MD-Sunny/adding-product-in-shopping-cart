@@ -1,4 +1,5 @@
 import React from 'react';
+import { addToCartDB } from '../Utilities/LocalDB';
 import './Product.css';
 
 const Product = (props) => {
@@ -6,7 +7,8 @@ const Product = (props) => {
 
     const addToCart = (_id) =>{
         // console.log('Product Added',_id);
-        localStorage.setItem(_id,1);
+        // localStorage.setItem(_id,1);
+        addToCartDB(_id);
     }
 
 
