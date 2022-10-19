@@ -4,8 +4,8 @@ import './Product.css';
 const Product = (props) => {
     const {_id, name, price} = props.product;
 // >> Part 01    
-    const addToCart = (_id) =>{
-        console.log('Product Added',_id)
+    const addToCart = (price) =>{
+        console.log('Product Added',price)
     }
 // << Part 01     
     return (
@@ -14,7 +14,7 @@ const Product = (props) => {
             <p>Name: {name}</p>
             <p>Price: {price}</p>
 {/*>><< Part 01*/}
-            <button onClick={addToCart(_id)}>Add To Cart</button>            
+            <button onClick={addToCart(price)}>Add To Cart</button>            
         </div>
     );
 };
