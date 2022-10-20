@@ -4,11 +4,11 @@ import './Product.css';
 const Product = (props) => {
     const {_id, name, price} = props.product;
 // >> Part 01    
-    const addToCart = (price) =>{
-        console.log('Product Added',price)
+    const addToCart = (_id) =>{
+        console.log('Product Added',_id)
     }
 
-    const addToCartWithParam = ()=>addToCart(price)
+    const addToCartWithParam = ()=>addToCart(_id)
 // << Part 01     
     return (
         <div className="singleProductStyle">
