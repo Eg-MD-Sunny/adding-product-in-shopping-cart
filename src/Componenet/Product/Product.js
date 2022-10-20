@@ -5,7 +5,7 @@ const Product = (props) => {
     const {_id, name, price} = props.product;
 // >> Part 01    
     const addToCart = (_id) =>{
-        console.log('Product Added',_id)
+        localStorage.setItem(_id,1);
     }
 
 // << Part 01     
