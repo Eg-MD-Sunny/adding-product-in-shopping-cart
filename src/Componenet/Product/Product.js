@@ -8,7 +8,6 @@ const Product = (props) => {
         console.log('Product Added',_id)
     }
 
-    const addToCartWithParam = ()=>addToCart(_id)
 // << Part 01     
     return (
         <div className="singleProductStyle">
@@ -16,7 +15,7 @@ const Product = (props) => {
             <p>Name: {name}</p>
             <p>Price: {price}</p>
 {/*>><< Part 01*/}
-            <button onClick={addToCartWithParam}>Add To Cart</button>            
+            <button onClick={()=>addToCart(_id)}>Add To Cart</button>            
         </div>
     );
 };
