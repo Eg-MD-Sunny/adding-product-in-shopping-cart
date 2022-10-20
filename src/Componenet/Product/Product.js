@@ -1,11 +1,12 @@
 import React from 'react';
+import { storageBD } from '../Utilities/LocalDB';
 import './Product.css';
 
 const Product = (props) => {
     const {_id, name, price} = props.product;
 // >> Part 01    
     const addToCart = (_id) =>{
-        localStorage.setItem(_id,1);
+        storageBD(_id);
     }
 
 // << Part 01     
