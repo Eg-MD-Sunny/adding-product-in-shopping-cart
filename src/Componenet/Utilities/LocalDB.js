@@ -1,8 +1,16 @@
-const storageBD = _id =>{
+    const storageBD = _id =>{
     let shoppingCart = {};
+    
+
+    //Add Quantity
+    const quantity = shoppingCart[_id];
+    if(quantity>0){
+        const newQuantity = quantity +1;
+        shoppingCart[_id] = newQuantity;
+    }else{
+        shoppingCart[_id] = 1;
+    }
     localStorage.setItem("Shopping-Cart",JSON.stringify(shoppingCart));
-
-
     // localStorage.setItem(_id,1)
     // const quantity = localStorage.getItem(_id)
     // if(quantity>0){
