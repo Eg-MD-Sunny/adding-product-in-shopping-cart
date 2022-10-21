@@ -5,8 +5,9 @@
     const storedCart = localStorage.getItem("Shopping-Cart");
     if(storedCart){
         shoppingCart = JSON.parse(storedCart);
+    }else{
+        shoppingCart = {};
     }
-
 
     //Add Quantity
     const quantity = shoppingCart[_id];
