@@ -1,6 +1,12 @@
     const storageBD = _id =>{
     let shoppingCart = {};
     
+    //Get the shoppingCart    
+    const storedCart = localStorage.getItem("Shopping-Cart");
+    if(storedCart){
+        shoppingCart = JSON.parse(storedCart);
+    }
+
 
     //Add Quantity
     const quantity = shoppingCart[_id];
